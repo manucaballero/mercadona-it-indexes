@@ -15,7 +15,7 @@ CREATE TABLE ventas (
     cantidad integer
 );
 
-INSERT INTO ventas (producto_id, pedido_id, fecha_venta, fecha_envio, cantidad)
+INSERT INTO ventas (producto_id, pedido_id, fecha_venta, cantidad)
 SELECT
     floor(random() * 1000 + 1), -- producto_id entre 1 y 1000
 	floor(random() * 10000 + 1), -- pedido_id entre 1 y 10000

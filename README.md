@@ -14,3 +14,5 @@ Una vez el contenedor esté levantado ejecuta en la base de datos mercadona-it-i
 el cual creará la tabla ventas en la base de datos y la rellenará de forma aleatoria con 10 millones de registros.
 
 Listo! Ya puedes empezar a trabajar con índices.
+
+Pd: En la carpeta info tienes documentación y ejemplos sobre los índices y sus tipos
