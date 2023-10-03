@@ -9,6 +9,8 @@
 
    En este caso, un índice B-Tree en la columna `numero_identificacion` sería eficiente ya que se utiliza en consultas de igualdad.
 
+   Tenemos un ejemplo sencillo en el archivo ejemplo.sql
+
 2. **Índice Hash**:
    - **Mejor caso de uso**: Los índices de hash son adecuados para igualdades exactas y búsquedas rápidas en valores con un alto grado de unicidad, como claves primarias.
 
