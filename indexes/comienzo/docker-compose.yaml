@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  mercadona-it-index-db:
+    image: postgres:11
+    environment:
+      POSTGRES_USER: sa
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: mercadona-it-index
+    volumes:
+      - postgresql:/var/lib/postgresql
+      - postgres11-data:/var/lib/postgresql/data
+    ports:
+      - "5436:5432"
+
+volumes:
+  postgresql:
+  postgres11-data:
+    driver: local
