@@ -20,7 +20,7 @@ DO $$
 BEGIN
     IF EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_id_btree' AND tablename = 'ventas') THEN
         -- Si el índice existe, eliminarlo
-        EXECUTE 'DROP INDEX idx_btree';
+        EXECUTE 'DROP INDEX idx_id_btree';
     END IF;
 END $$;
 
@@ -28,6 +28,6 @@ DO $$
 BEGIN
     IF EXISTS (SELECT 1 FROM pg_indexes WHERE indexname = 'idx_id_hash' AND tablename = 'ventas') THEN
         -- Si el índice existe, eliminarlo
-        EXECUTE 'DROP INDEX idx_hash';
+        EXECUTE 'DROP INDEX idx_id_hash';
     END IF;
 END $$;
