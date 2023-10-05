@@ -10,3 +10,27 @@
    ```
 
    En este caso, un índice B-Tree en la columna `numero_identificacion` sería eficiente ya que se utiliza en consultas de igualdad.
+
+
+   ![Image](../images/btree1.jpeg )
+
+
+   Un árbol B-Tree almacena en cada nodo claves en orden ascendente. Cada una de estas claves tiene dos referencias a nodos hijo. El hijo de la izq tiene valores menores a la llave actual, mientras que el lado derecho tiene llaves mayores a la actual. El tiempo de busqueda es de **O(log(n))**
+
+
+   En bases de datos se hace uso de un B+Tree. Este tipo de estructura sólo tiene datos en los nodos hoja (último nivel de profundidad). Los nodos hoja están conectados entre ellos a través de una lista enlazada (Linked List).
+
+   ```sql
+   SELECT * FROM TABLE WHERE ID = 3;
+   ```
+
+   ![Image](../images/btree2.webp )
+
+
+   ```sql
+   SELECT * FROM TABLE WHERE ID BETWEEN 3 AND 7;
+   ```
+
+   ![Image](../images/btree3.webp )
+
+
