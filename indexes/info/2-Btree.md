@@ -10,3 +10,20 @@
    ```
 
    En este caso, un índice B-Tree en la columna `numero_identificacion` sería eficiente ya que se utiliza en consultas de igualdad.
+
+
+   ![Image](../images/btree1.jpeg )
+
+
+   Un árbol B-Tree almacena en cada nodo claves en orden ascendente. Cada una de estas claves tiene dos referencias a nodos hijo. El hijo de la izq tiene valores menores a la llave actual, mientras que el lado derecho tiene llaves mayores a la actual. El tiempo de busqueda es de **O(log(n))**
+
+   Pero en una base de datos buscamos traer la información asociada a la llave. ¿Cómo se hace esto? 
+
+   Se hace uso de un B+Tree.
+
+   ![Image](../images/btree2.webp )
+
+
+   ![Image](../images/btree3.webp )
+
+

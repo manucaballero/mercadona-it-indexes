@@ -21,7 +21,7 @@
 
    2. Función Hash: La función convierte una clave en un índice o ubicación en el array. La función hash toma la clave como entrada y devuelve un número entero (el índice) que representa dónde se almacenará el valor asociado a esa clave.
 
-   En la siguiente imagen se muestra un ejemplo visual en el que el método hash recibe una clave y devuelva la posición del array que ocupan los datos de esa clave.
+   En la siguiente imagen se muestra un ejemplo visual en el que el método hash recibe una clave y devuelva la posición del array que ocupan los datos de esa clave. La posición devuelta será 
 
    ![Image](../images/hash1.png )
 
