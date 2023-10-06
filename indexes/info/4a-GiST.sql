@@ -1,9 +1,6 @@
-CREATE EXTENSION postgis;
-
 
 ALTER TABLE ventas ADD COLUMN ubicacion geometry(Point);
 
--- Rellenar todos los registros con ubicaciones aleatorias
 UPDATE ventas
 SET ubicacion = ST_SetSRID(ST_MakePoint(
     -180 + random() * 360,  -- Longitud aleatoria entre -180 y 180
@@ -12,8 +9,9 @@ SET ubicacion = ST_SetSRID(ST_MakePoint(
 
 CREATE INDEX idx_gist_ubicacion ON ventas USING gist (ubicacion);
 
-
--- Consulta utilizando el índice GiST para buscar ventas dentro de un radio de 100 km de Nueva York (latitud 40.7128, longitud -74.0060)
-SELECT *
+EXPLAIN ANALYZE
+SELECT *,
+ST_MakeEnvelope(-18.1619, 27.6377, 4.3275, 43.7917, 4326)
 FROM ventas
-WHERE ST_DWithin(ubicacion, 'POINT(40.7128 -74.0060)', 100000); -- 100000 metros = 100 km
+WHERE ST_Within(ubicacion, ST_MakeEnvelope(-18.1619, 27.6377, 4.3275, 43.7917, 4326));
+
