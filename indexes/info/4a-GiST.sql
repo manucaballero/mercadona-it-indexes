@@ -15,3 +15,7 @@ ST_MakeEnvelope(-18.1619, 27.6377, 4.3275, 43.7917, 4326)
 FROM ventas
 WHERE ST_Within(ubicacion, ST_MakeEnvelope(-18.1619, 27.6377, 4.3275, 43.7917, 4326));
 
+
+
+ --docker run -d -e POSTGRES_PASSWORD=12345  -v ${HOME}/postgres-data/:/var/lib/postgresql/data  -p 5432:5432  postgis/postgis
+
