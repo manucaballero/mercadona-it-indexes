@@ -1,4 +1,7 @@
-ALTER TABLE ventas ADD COLUMN ubicacion geometry(Point, 4326);
+CREATE EXTENSION postgis;
+
+
+ALTER TABLE ventas ADD COLUMN ubicacion geometry(Point);
 
 -- Rellenar todos los registros con ubicaciones aleatorias
 UPDATE ventas
